@@ -1,0 +1,10 @@
+spring.application.name=config-client-app
+
+spring.profiles.active=prod
+#spring.cloud.config.uri=http://localhost:8888
+
+#eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+eureka.client.register-with-eureka=false
+eureka.client.fetch-registry=true
+spring.cloud.config.uri=http://localhost:8761/eureka
+

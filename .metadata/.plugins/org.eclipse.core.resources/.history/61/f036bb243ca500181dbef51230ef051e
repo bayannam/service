@@ -1,0 +1,6 @@
+spring.appllication.name=discovery-server
+server.port=8761
+eureka.client.register-with-eureka=false
+eureka.client.fetch-registry=false
+eureka.environmen=MyEnv
+eureka.datacenter=zensar

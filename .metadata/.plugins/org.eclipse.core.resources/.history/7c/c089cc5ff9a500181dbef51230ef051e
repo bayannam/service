@@ -1,0 +1,32 @@
+package com.example.demo;
+
+import java.util.Properties;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+@SpringBootApplication
+public class ConfigClientAppApplication {
+	
+	@Autowired
+	private ConfigAppConfiguration configAppConfiguration;
+	
+	@Value("&{some.other.property}")
+	private String someOtherProperty;
+
+	public static void main(String[] args) {
+		SpringApplication.run(ConfigClientAppApplication.class, args);
+	}
+	
+	public String getConfiguration() {
+		
+		StringBuffer sb = new StringBuffer();
+		sb.append(configAppConfiguration.getProperty());
+		sb.append("||");
+		sb.append(csomeOtherProperty);
+		
+	}
+}
